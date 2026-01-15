@@ -64,7 +64,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
 
         {/* Enhanced Instructions Card */}
         <div 
-          className="backdrop-blur-sm rounded-2xl p-8 mb-20 border shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-[fade-in_0.8s_ease-out_0.7s_both]"
+          className="backdrop-blur-sm rounded-2xl p-8 mb-20 border shadow-xl hover:shadow-2xl hover:-translate-y-1 motion-reduce:hover:translate-y-0 transition-all duration-300 animate-[fade-in_0.8s_ease-out_0.7s_both]"
           style={{ 
             backgroundColor: 'rgba(255, 255, 255, 0.7)',
             borderColor: 'var(--color-sage-light)'
@@ -114,7 +114,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
         {/* Enhanced CTA Button */}
         <button
           onClick={onStart}
-          className="relative py-6 px-12 rounded-2xl text-xl font-semibold text-white shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 motion-reduce:animate-none animate-[fade-in_1s_ease-out_0.9s_both]"
+          className="relative py-6 px-12 rounded-2xl text-xl font-semibold text-white shadow-2xl hover:scale-105 active:scale-95 motion-reduce:hover:scale-100 motion-reduce:active:scale-100 transition-all duration-300 motion-reduce:animate-none animate-[fade-in_1s_ease-out_0.9s_both]"
           style={{
             background: `linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%)`,
             boxShadow: '0 10px 40px rgba(199, 123, 94, 0.3)'
