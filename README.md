@@ -44,7 +44,7 @@ Swap out questions to match your event theme in minutes
 
 ```bash
 # Clone and install
-git clone https://github.com/Fixito/my-awesome-bingo.git
+git clone https://github.com/YOUR-USERNAME/my-awesome-bingo.git
 cd my-awesome-bingo
 npm install
 
@@ -73,10 +73,13 @@ export const questions: string[] = [
   "bikes to work",
   "has lived in another country",
   "has a pet",
+  "prefers tea over coffee",
+  "plays an instrument",
+  "speaks more than 2 languages",
   // Add your own creative prompts!
   "has climbed a mountain",
-  "speaks Klingon",
-  "has a secret handshake",
+  "loves spicy food",
+  "can juggle",
 ];
 ```
 
