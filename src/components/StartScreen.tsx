@@ -37,9 +37,9 @@ export function StartScreen({ onStart }: StartScreenProps) {
 
       {/* Content */}
       <div className="relative text-center max-w-4xl z-10">
-        {/* Hero Title with Bounce Animation */}
+        {/* Hero Title with Gentle Fade In Animation */}
         <h1 
-          className="text-7xl md:text-8xl font-light tracking-wider mb-6 animate-[bounce_0.8s_ease-out]"
+          className="text-7xl md:text-8xl font-light tracking-wider mb-6 animate-[fade-in_1s_ease-out]"
           style={{ color: 'var(--color-text)' }}
         >
           Soc Ops
@@ -114,7 +114,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
         {/* Enhanced CTA Button */}
         <button
           onClick={onStart}
-          className="relative py-6 px-12 rounded-2xl text-xl font-semibold text-white shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-[pulse_2s_ease-in-out_infinite] motion-reduce:animate-none hover:animate-none"
+          className="relative py-6 px-12 rounded-2xl text-xl font-semibold text-white shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 motion-reduce:animate-none animate-[fade-in_1s_ease-out_0.9s_both]"
           style={{
             background: `linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%)`,
             boxShadow: '0 10px 40px rgba(199, 123, 94, 0.3)'
