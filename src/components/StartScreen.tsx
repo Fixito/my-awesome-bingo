@@ -80,7 +80,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
           {/* Two-column layout on larger screens */}
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <div className="flex items-start space-x-3">
-              <span className="text-3xl">🎯</span>
+              <span className="text-3xl" role="img" aria-label="Target">🎯</span>
               <div>
                 <p className="font-medium" style={{ color: 'var(--color-text)' }}>Find Your Matches</p>
                 <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
@@ -90,7 +90,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
             </div>
             
             <div className="flex items-start space-x-3">
-              <span className="text-3xl">✨</span>
+              <span className="text-3xl" role="img" aria-label="Sparkles">✨</span>
               <div>
                 <p className="font-medium" style={{ color: 'var(--color-text)' }}>Mark Your Squares</p>
                 <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
@@ -100,7 +100,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
             </div>
             
             <div className="flex items-start space-x-3 md:col-span-2 justify-center">
-              <span className="text-3xl">🏆</span>
+              <span className="text-3xl" role="img" aria-label="Trophy">🏆</span>
               <div>
                 <p className="font-medium" style={{ color: 'var(--color-text)' }}>Win with Five in a Row</p>
                 <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
@@ -114,7 +114,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
         {/* Enhanced CTA Button */}
         <button
           onClick={onStart}
-          className="relative py-6 px-12 rounded-2xl text-xl font-semibold text-white shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-[pulse_2s_ease-in-out_infinite] hover:animate-none"
+          className="relative py-6 px-12 rounded-2xl text-xl font-semibold text-white shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-[pulse_2s_ease-in-out_infinite] motion-reduce:animate-none hover:animate-none"
           style={{
             background: `linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%)`,
             boxShadow: '0 10px 40px rgba(199, 123, 94, 0.3)'
@@ -130,20 +130,6 @@ export function StartScreen({ onStart }: StartScreenProps) {
           />
         </button>
       </div>
-      
-      {/* CSS for custom animations */}
-      <style>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </div>
   );
 }
