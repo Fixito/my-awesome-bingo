@@ -1,7 +1,8 @@
-import { useBingoGame } from './hooks/useBingoGame';
-import { StartScreen } from './components/StartScreen';
-import { GameScreen } from './components/GameScreen';
 import { BingoModal } from './components/BingoModal';
+import { CardDeck } from './components/CardDeck';
+import { GameScreen } from './components/GameScreen';
+import { StartScreen } from './components/StartScreen';
+import { useBingoGame } from './hooks/useBingoGame';
 
 function App() {
   const {
@@ -10,13 +11,18 @@ function App() {
     winningSquareIds,
     showBingoModal,
     startGame,
+    startShuffle,
     handleSquareClick,
     resetGame,
     dismissModal,
   } = useBingoGame();
 
   if (gameState === 'start') {
-    return <StartScreen onStart={startGame} />;
+    return <StartScreen onStart={startGame} onStartShuffle={startShuffle} />;
+  }
+
+  if (gameState === 'shuffle') {
+    return <CardDeck onReset={resetGame} />;
   }
 
   return (
@@ -28,9 +34,7 @@ function App() {
         onSquareClick={handleSquareClick}
         onReset={resetGame}
       />
-      {showBingoModal && (
-        <BingoModal onDismiss={dismissModal} />
-      )}
+      {showBingoModal && <BingoModal onDismiss={dismissModal} />}
     </>
   );
 }
